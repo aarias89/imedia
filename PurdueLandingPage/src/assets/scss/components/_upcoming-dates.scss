@@ -1,0 +1,12 @@
+.upcoming-dates-container{
+    background-color: #fbf8ef;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    .upcoming-date{
+        border-left: 1px solid $color-grey-light-2;
+        .day{
+            color: $color-tertiary;
+        }
+    }
+   
+}

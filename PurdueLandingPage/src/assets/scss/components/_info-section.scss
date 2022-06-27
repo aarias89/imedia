@@ -1,0 +1,37 @@
+
+.info-section {
+    border-top: solid 1px $black;
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        border-top: solid 5px $black;
+        width: 15rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .heading-1{
+        max-width: 75%;
+    }
+    .img-container {
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content {
+        .heading-4 {
+            font-size: 2.6rem;
+            font-weight: 300;
+        }
+        .copy {
+            line-height: 1.6;
+        }
+        a {
+           font-size: 2rem;
+           text-decoration: none;
+        }
+    }
+}

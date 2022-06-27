@@ -1,0 +1,101 @@
+.jumbotron {
+  color: white;
+  background-image: url("../img/iStock-615430932.png");
+  background-position: unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  height: 364px;
+  .hero-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: $black;
+    opacity: 0.5;
+    left: 0;
+  }
+ 
+    .hero-text-container {
+      align-self: flex-end;
+      margin-bottom: 3rem;
+      h1,
+      h2,
+      h3 {
+        font-family: $font-primary;
+       
+      }
+      .heading-1{
+          color: $color-grey-light-1;
+      }
+      .heading-3 {
+        max-width: 62rem;
+        line-height: 2.8rem;
+        font-weight: 300;
+      }
+    }
+
+    .hero-content {
+      background-color: #ffffffcc;
+      text-align: center;
+      padding: 2.5rem 0rem;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      .header {
+        padding: 0rem 1.1rem 3rem;
+        .header-title {
+          color: $color-tertiary;
+          font-size: 2.5rem;
+          line-height: 3.8rem;
+          margin-bottom: 1.5rem;
+          &::before {
+            content: "— ";
+          }
+          &::after {
+            content: " —";
+          }
+        }
+        .header-subtitle {
+          color: $black;
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          &.large {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin: 0 2rem;
+          }
+        }
+      }
+
+      .button {
+        margin: 0 4rem 3rem;
+        text-decoration: none;
+      }
+      .hero-link {
+        color: $black;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  
+  @media only screen and (max-width: $bp-small) {
+    
+    
+      background-size: 80rem;
+
+      margin-bottom: 30rem;
+      .text {
+        padding-top: 15rem;
+      }
+   .heading-1{
+    margin-top: 30%;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+   }
+
+  }
+}

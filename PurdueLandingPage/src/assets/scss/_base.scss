@@ -1,0 +1,218 @@
+
+
+// COLOR VARIABLES
+$color-primary: #ffffff;
+$color-primary-dark: #362f2d;
+$color-secondary: #ffffff;
+$color-tertiary:#6e99b4;
+$color-quartenary:#98700d;
+
+$black: #000;
+$white: #fff;
+$tan: #efede8;
+
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #f3f3f3;
+
+$color-grey-dark-1: #696969;
+$color-grey-dark-2: #6D5D4B;
+
+$link-color: $white;
+
+// FONT VARIABLES
+$font-primary: 'Archivo Narrow', sans-serif;
+$font-display: 'Arial', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+
+//GLOBAL RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 400;
+    line-height: 1.45;
+    @media only screen and (max-width: $bp-large) {
+    padding: 0 5px;
+    }
+    
+}
+
+.container,
+.container-fluid {
+    max-width: 1248px;
+
+
+    @media only screen and (max-width: $bp-largest) {
+
+
+    }
+    @media only screen and (max-width: $bp-large) {
+        width: 960px;
+        margin-top: 1rem;
+
+    }
+    
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 740px;
+    }
+}
+
+.divider {
+    border-bottom: 1px solid $black;
+    margin: 2rem 0 2.5rem 0;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+// tabs
+ul{
+    &.sectioned{
+        list-style: none;
+        li{
+            border-bottom: 2px solid $color-grey-light-1;
+            &:last-of-type{
+                border-bottom: none;
+            }
+            .heading-5{
+                margin: 1rem 0;
+            }
+        }
+    } 
+}
+
+
+.tab-container{
+    .nav{
+        grid-gap: 1rem;
+        &.nav-tabs{
+            padding-right: 10rem;
+            &.small{
+                padding-right: 0;
+                grid-gap: 0;
+                margin-right: 10rem;
+                li {
+                    margin-right: 0;
+                }
+            }
+        }
+        &.nav-tabs> li {
+            margin-right: .5rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            background-color: $color-tertiary;
+            color: $white;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                
+            }
+          
+            &.active{
+            background-color: $white;
+            color:$color-tertiary ;
+            position: relative;
+            &:before{
+                content: " ";
+                position: absolute;
+                top: -4.5px;
+                border-top: solid 5px $color-quartenary;
+                width: 10rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        
+            }
+        }
+       
+    }
+    .tab-content{
+        background-color: $white;
+   
+        ul {
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+        .tab-pane{
+            padding: 3rem 2rem;
+            opacity: 0;
+            &.active {
+            opacity: 1;
+
+            }
+        }
+    }
+}
+
+
+.content {
+
+    &--tertiary { background-color: $color-tertiary; }
+    &--tan { background-color: $tan; }
+
+    
+}
+
+.light {
+    color: $white !important;
+}
+
+.orange {
+    color: $color-quartenary !important;
+}
+.dark {
+    color: $color-grey-dark-2 !important;
+}
+
+.button {
+    display: block;
+    background-color:$color-tertiary ;
+    color: $white;
+    border: none;
+    border-radius: 0;
+    height: 4.2rem;
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2.69rem;
+    cursor: pointer;
+    transition: all .3s ease;
+  
+  
+    &:hover {
+        color: $black;
+        background-color: $color-tertiary;
+    }
+  
+    &.secondary{
+        background-color:$color-quartenary ;
+  
+    }
+  }
+  

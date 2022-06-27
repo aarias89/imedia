@@ -1,0 +1,22 @@
+.tabbed-content {
+    padding: 5rem 0rem;
+    background-color: #292929;
+    .left{
+        border-right: 1px solid $color-grey-light-2;
+    }
+    .heading-4 {
+        margin-bottom: 2rem;
+    }
+
+    .credits>li {
+        display: flex;
+        justify-content:space-between;
+        &:last-of-type{
+            margin-top: 2rem;
+        }
+        .heading-2{
+            font-size: 5.4rem;
+        }
+    }
+   
+}
